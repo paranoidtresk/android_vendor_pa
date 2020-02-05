@@ -34,7 +34,8 @@ LOCAL_REQUIRED_MODULES := \
     AOSPASettingsOverlay \
     AOSPASettingsProviderOverlay \
     AOSPASystemUIOverlay \
-    AOSPATelephonyOverlay
+    AOSPATelephonyOverlay \
+    EmptyOverlay
 
 include $(BUILD_PHONY_PACKAGE)
 
