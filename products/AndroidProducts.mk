@@ -62,6 +62,7 @@ COMMON_LUNCH_CHOICES += \
     pa_land-userdebug \
     pa_oneplus3-userdebug \
     pa_oneplus6-userdebug \
+    pa_oneplus6-user \
     pa_oneplus7-userdebug \
     pa_oneplus7pro-userdebug \
     pa_oneplus7pro-user \
