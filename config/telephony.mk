@@ -28,10 +28,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
 
-# Sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=Leaps_and_bounds.ogg
-
 # TCP Connection Management
 PRODUCT_PACKAGES += tcmiface
 PRODUCT_BOOT_JARS += tcmiface

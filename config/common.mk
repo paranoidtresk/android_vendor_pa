@@ -40,19 +40,8 @@ PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
-# Boot Animation
-ifneq ($(TARGET_BOOT_ANIMATION_RES),)
-PRODUCT_COPY_FILES += \
-    vendor/pa/prebuilt/bootanimation/$(TARGET_BOOT_ANIMATION_RES).zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
-endif
-
 # Filesystem
 TARGET_FS_CONFIG_GEN += vendor/pa/config/config.fs
-
-# Fonts
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/pa/prebuilt/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
-        vendor/pa/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 # GApps
 ifneq ($(TARGET_DISABLES_GAPPS), true)
@@ -172,11 +161,6 @@ else
 include vendor/pa/sdclang/sdclang.mk
 endif
 
-# Sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.alarm_alert=Bright_morning.ogg \
-    ro.config.notification_sound=End_note.ogg
-
 # Strip the local variable table and the local variable type table to reduce
 # the size of the system image. This has no bearing on stack traces, but will
 # leave less information available via JDWP.
@@ -197,3 +181,9 @@ DISABLE_EAP_PROXY := true
 
 # Move Wi-Fi modules to vendor
 PRODUCT_VENDOR_MOVE_ENABLED := true
+
+# Pixel Style
+include vendor/pixelstyle/config.mk
+
+# Google Customization
+include vendor/google-customization/config.mk

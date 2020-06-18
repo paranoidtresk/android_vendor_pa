@@ -21,9 +21,7 @@ LOCAL_REQUIRED_MODULES := \
     AccentColorDodgerBlueOverlay \
     AccentColorHadalZoneOverlay \
     AccentColorLostInForestOverlay \
-    AccentColorPixelBlueOverlay \
     AccentColorPurpleHeatOverlay \
-    AccentColorRedOverlay \
     AccentColorRoseOverlay \
     AccentColorScooterOverlay \
     AccentColorSlateOverlay \
@@ -33,17 +31,10 @@ LOCAL_REQUIRED_MODULES := \
     AOSPABluetoothOverlay \
     AOSPAContactsProviderOverlay \
     AOSPAFrameworksOverlay \
-    AOSPAOverlayStub \
     AOSPASettingsOverlay \
     AOSPASettingsProviderOverlay \
     AOSPASystemUIOverlay \
-    AOSPATelephonyOverlay \
-    AOSPAThemePickerOverlay \
-    FontGoogleSansOverlay \
-    FontSlateForOnePlusOverlay \
-    ParanoidDozeOverlay \
-    ParanoidHubOverlay \
-    ParanoidLauncherOverlay
+    AOSPATelephonyOverlay
 
 include $(BUILD_PHONY_PACKAGE)
 
