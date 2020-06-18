@@ -12,29 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Abstruct
-PRODUCT_PACKAGES += Abstruct
-
 # AOSP Packages
 PRODUCT_PACKAGES += \
     SoundRecorder \
     WallpaperPicker \
-    LatinIME \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    ThemePicker
+    LatinIME
 
 # Bluetooth Audio (A2DP)
 PRODUCT_PACKAGES += libbthost_if
-
-# Charger mode images
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-ifneq ($(TARGET_USES_AOSP_CHARGER),true)
-PRODUCT_PACKAGES += \
-    product_charger_res_images
-endif
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -50,28 +35,7 @@ endif
 
 PRODUCT_PACKAGES += \
     Longshot \
-    ParanoidPapers \
-    ParanoidQuickStep \
-
-ifneq ($(filter RELEASE BETA,$(PA_BUILDTYPE)),)
-    PRODUCT_PACKAGES += \
-    ParanoidHub
-endif
-
-ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
-TARGET_ENABLE_FACE_SENSE := true
-PRODUCT_PACKAGES += \
-    ParanoidFaceSense
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.face.sense_service=$(TARGET_ENABLE_FACE_SENSE)
-endif
-
-ifeq ($(TARGET_DISABLES_GAPPS), true)
-PRODUCT_PACKAGES += \
-    ChromeModernPublic \
-    MarkupGoogle \
-    MatchmakerPrebuilt
-endif
+    OpenDelta
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -86,10 +50,6 @@ PRODUCT_PACKAGES += \
 
 # Retro Music Player
 PRODUCT_PACKAGES += RetroMusicPlayer
-
-# Snapdragon Apps
-PRODUCT_PACKAGES += \
-    SnapdragonGallery
 
 # Tools - FS
 PRODUCT_PACKAGES += \

@@ -27,7 +27,7 @@ ifndef PA_VERSION_FLAVOR
   # This is the global pa version flavor that determines the focal point
   # behind our releases. This is bundled alongside the $(PA_VERSION_CODE)
   # and only changes per major Android releases.
-  PA_VERSION_FLAVOR := Quartz
+  PA_VERSION_FLAVOR := 10
 endif
 
 ifndef PA_VERSION_CODE
@@ -44,7 +44,7 @@ endif
 # BETA: Public builds for testing purposes
 # Public releases will not include a TAG
 ifndef PA_BUILDTYPE
-  PA_BUILD_VARIANT := DEV
+  PA_BUILD_VARIANT := TreskMod
 else
   ifeq ($(PA_BUILDTYPE), ALPHA)
     PA_BUILD_VARIANT := Alpha
@@ -67,7 +67,7 @@ ifneq ($(filter Release,$(PA_BUILD_VARIANT)),)
 else ifneq ($(filter Alpha Beta,$(PA_BUILD_VARIANT)),)
   PA_VERSION := $(shell echo $(PA_VERSION_FLAVOR) | tr A-Z a-z)-$(shell echo $(PA_BUILD_VARIANT) | tr A-Z a-z)-$(PA_VERSION_CODE)-$(PA_BUILD)-$(BUILD_DATE)
 else
-  PA_VERSION := $(shell echo $(PA_VERSION_FLAVOR) | tr A-Z a-z)-$(PA_VERSION_CODE)-$(PA_BUILD)-$(BUILD_DATE)-$(shell echo $(PA_BUILD_VARIANT) | tr A-Z a-z)
+  PA_VERSION := $(shell echo $(PA_VERSION_FLAVOR) | tr A-Z a-z)-$(PA_BUILD)-$(BUILD_DATE)-$(shell echo $(PA_BUILD_VARIANT) | tr A-Z a-z)
 endif
 
 # Paranoid Android System Version
