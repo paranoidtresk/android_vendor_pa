@@ -1,13 +1,13 @@
 [
     {
-        "remote":       "aospa",
-        "repository":   "AOSPA/android_device_oneplus_oneplus7pro",
+        "remote":       "tresk",
+        "repository":   "android_device_oneplus_oneplus7pro",
         "target_path":  "device/oneplus/oneplus7pro",
         "revision":     "quartz"
     },
     {
-        "remote":       "aospa",
-        "repository":   "AOSPA/android_device_oneplus_sm8150-common",
+        "remote":       "tresk",
+        "repository":   "android_device_oneplus_sm8150-common",
         "target_path":  "device/oneplus/sm8150-common",
         "revision":     "quartz"
     },
