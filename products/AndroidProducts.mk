@@ -16,6 +16,7 @@
 # Product Makefiles
 PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/A6020/pa_A6020.mk \
+    $(LOCAL_DIR)/angler/pa_angler.mk \
     $(LOCAL_DIR)/beryllium/pa_beryllium.mk \
     $(LOCAL_DIR)/cepheus/pa_cepheus.mk \
     $(LOCAL_DIR)/chiron/pa_chiron.mk \
@@ -27,6 +28,7 @@ PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/hltekor/pa_hltekor.mk \
     $(LOCAL_DIR)/hltetmo/pa_hltetmo.mk \
     $(LOCAL_DIR)/land/pa_land.mk \
+    $(LOCAL_DIR)/lavender/pa_lavender.mk \
     $(LOCAL_DIR)/mata/pa_mata.mk \
     $(LOCAL_DIR)/oneplus3/pa_oneplus3.mk \
     $(LOCAL_DIR)/oneplus5/pa_oneplus5.mk \
@@ -48,6 +50,7 @@ PRODUCT_MAKEFILES += \
 # Lunch targets
 COMMON_LUNCH_CHOICES += \
     pa_A6020-userdebug \
+    pa_angler-userdebug \
     pa_beryllium-userdebug \
     pa_cepheus-userdebug \
     pa_chiron-userdebug \
@@ -60,6 +63,7 @@ COMMON_LUNCH_CHOICES += \
     pa_hltetmo-userdebug \
     pa_mata-userdebug \
     pa_land-userdebug \
+    pa_lavender-userdebug \
     pa_oneplus3-userdebug \
     pa_oneplus6-userdebug \
     pa_oneplus6-user \
