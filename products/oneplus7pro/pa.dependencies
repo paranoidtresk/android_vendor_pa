@@ -24,6 +24,12 @@
         "revision":     "quartz"
     },
     {
+        "remote":       "mtresk-gitlab",
+        "repository":   "android_packages_apps_GoogleCamera",
+        "target_path":  "packages/apps/GoogleCamera",
+        "revision":     "quartz"
+    },
+    {
         "remote":       "aospa",
         "repository":   "AOSPA/android_device_qcom_common",
         "target_path":  "device/qcom/common",
